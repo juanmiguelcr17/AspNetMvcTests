@@ -1,0 +1,65 @@
+﻿@model IEnumerable<PopupBoostrap.Models.Equipo>
+
+<div class="form-group">
+    <label class="col-sm-2 control-label">Ticket:</label>
+    <div class="col-sm-10">
+        @*<input id="form:txtTicket" type="text" name="form:txtTicket" />*@
+        <a href="#" data-toggle="modal" data-target="#teamModalTeams">
+            <span class="glyphicon glyphicon-search"> Buscar</span>
+        </a>
+    </div>
+</div>
+
+<!--POPUP MODAL-->
+<div class="modal fade" id="teamModalTeams" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title">Equipos</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Ciudad)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Titulos)
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nombre)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Ciudad)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Titulos)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
