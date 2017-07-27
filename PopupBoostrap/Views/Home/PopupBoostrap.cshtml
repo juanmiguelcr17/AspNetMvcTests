@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "PopupBoostrap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/namshulSelfIssue.site.css" rel="stylesheet" />
+
+<h2>PopupBoostrap</h2>
+
+<div class="form-group">
+    <label class="col-sm-2 control-label">Ticket:</label>
+    <div class="col-sm-10">
+        @*<input id="form:txtTicket" type="text" name="form:txtTicket" />*@
+        <a href="#" data-toggle="modal" data-target="#ticketModalTicket">
+            <span class="glyphicon glyphicon-question-sign"></span>
+        </a>
+    </div>
+</div>
+
+<!--POPUP MODAL-->
+<div class="modal fade" id="ticketModalTicket" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title">BB8</h4>
+            </div>
+            <div class="modal-body">
+                <img src="../Content/images/Capture.png" class="img-responsive" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
