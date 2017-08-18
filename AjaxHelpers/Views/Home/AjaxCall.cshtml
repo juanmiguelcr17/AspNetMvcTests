@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "AjaxCall";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.js"></script>
+<link href="~/Content/bootstrap-dialog.css" rel="stylesheet" />
+<script src="~/Scripts/Ajax.Validations.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script src="~/Scripts/bootstrap-dialog.js"></script>
+
+
+<h2>AjaxCall</h2>
+
+@Ajax.ActionLink("Prueba AJAX","AjaxCalling",new AjaxOptions { OnComplete="OnSuccess", OnFailure="OnError", HttpMethod="POST" })
+

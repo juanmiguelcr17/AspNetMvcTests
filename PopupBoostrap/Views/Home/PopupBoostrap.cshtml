@@ -4,7 +4,40 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <link href="~/Content/namshulSelfIssue.site.css" rel="stylesheet" />
+<style>
+        .glyphicon {
+          position: relative;
+          top: 1px;
+          display: inline-block;
+          font-style: normal;
+          font-weight: normal;
+          line-height: 1;
 
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        .glyphicon-question-sign:before {
+          content: "?";
+        }
+        .glyphicon-question-sign {
+          color:white;
+          background-color:#6FC600;
+          border-radius:100%;
+          font-weight:bold;
+          padding-left:3px;
+          padding-right:3px;
+        }
+        .glyphicon-question-sign:hover {
+          background-color:#59B000;
+        }
+        .glyphicon-question-sign:visited {
+          background-color:#6FC600;
+        }
+        .glyphicon-question-sign:active,.glyphicon-question-sign:link,.glyphicon-question-sign:visited {
+          text-decoration:none;
+          color:white;
+        }
+</style>
 <h2>PopupBoostrap</h2>
 
 <div class="form-group">
@@ -13,6 +46,8 @@
         @*<input id="form:txtTicket" type="text" name="form:txtTicket" />*@
         <a href="#" data-toggle="modal" data-target="#ticketModalTicket">
             <span class="glyphicon glyphicon-question-sign"></span>
+        </a>
+        <a href="#" data-toggle="modal" class="question-sign" data-target="#ticketModalTicket">
         </a>
     </div>
 </div>
