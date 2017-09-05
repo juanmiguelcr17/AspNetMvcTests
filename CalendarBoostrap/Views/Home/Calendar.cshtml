@@ -1,0 +1,38 @@
+﻿
+
+<h2>Calendar</h2>
+
+@Scripts.Render("~/bundles/calendar")
+@Styles.Render("~/Content/calendar")
+
+<div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1' style="width:50%;">
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<input type="button" id="btnCalendar" class="btn btn-default btn-sm" value="Ver fecha" />
+
+<script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker({
+                    locale: 'es',
+                    format: 'DD/MM/YYYY'
+                });
+            });
+            $('#btnCalendar').click(function () {
+                var d = $('#datetimepicker1').data('date');
+                alert(d);
+            });
+</script>
+
+
