@@ -9,6 +9,9 @@
 </div>
 
 <div class="row">
+    <div>
+        @Html.DropDownList("Estados", ViewBag.Estados as SelectList, new { name = "estado" })
+    </div>
     <div class="col-md-4">
         <h2>Getting started</h2>
         <p>
